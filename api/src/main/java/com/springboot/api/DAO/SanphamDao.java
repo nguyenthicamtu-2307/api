@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.springboot.api.interfaces.SanphamInterface;
 import com.springboot.api.model.sanpham;
 @Service
+@Repository
 public class SanphamDao implements SanphamInterface{
 	@Autowired
 	JdbcTemplate template;

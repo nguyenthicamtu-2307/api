@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.springboot.api.service.sanphamservice;
+
 import com.springboot.api.model.sanpham;
+import com.springboot.api.service.sanphamservice;
 
 @RestController
 @RequestMapping("/sanpham")
+
 public class sanphamcontroller {
 	@Autowired //sẽ tự động inject bean tương ứng vào vị trí được đánh dấu
 	private sanphamservice service;
