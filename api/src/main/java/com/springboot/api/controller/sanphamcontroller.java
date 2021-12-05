@@ -35,7 +35,7 @@ public class sanphamcontroller {
 		
 	}
 	@PostMapping("/update/{idsp}")//xử  lý hàm bằng phương thức post
-	public String save(@RequestBody sanpham p,@PathVariable String id,Model model) {
+	public String save(@RequestBody sanpham p,@PathVariable int id,Model model) {
 		p.setIdsp(id);
 		int r=service.edit(p);
 		if(r==0) {
@@ -52,5 +52,24 @@ public class sanphamcontroller {
 		}
 		return "Đã xóa thành công";
 	}
-	
+	@GetMapping("/listts")
+	public List<Map<String, Object>> listts(Model model) {
+		return service.getts();
+	}
+	@GetMapping("/listbm")
+	public List<Map<String, Object>> listbm(Model model) {
+		return service.getbm();
+	}
+	@GetMapping("/listcf")
+	public List<Map<String, Object>> listcf(Model model) {
+		return service.getcf();
+	}
+	@GetMapping("/listbsn")
+	public List<Map<String, Object>> listbsn(Model model) {
+		return service.getbsn();
+	}
+	@GetMapping("/dexuat")
+	public List<Map<String, Object>> listdexuat(Model model) {
+		return service.getdexuat();
+	}
 }

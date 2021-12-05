@@ -52,4 +52,39 @@ public class SanphamDao implements SanphamInterface{
 		return template.update(sql, id);
 	}
 
+	@Override
+	public List<Map<String, Object>> getts() {
+		// TODO Auto-generated method stub
+		List<Map<String, Object>> list = template.queryForList("select * from sanpham where iddm=1");
+		return list;
+	}
+
+	@Override
+	public List<Map<String, Object>> getbm() {
+		// TODO Auto-generated method stub
+		List<Map<String, Object>> list = template.queryForList("select * from sanpham where iddm=3");
+		return list;
+	}
+
+	@Override
+	public List<Map<String, Object>> getcf() {
+		// TODO Auto-generated method stub
+		List<Map<String, Object>> list = template.queryForList("select * from sanpham where iddm=2");
+		return list;
+	}
+
+	@Override
+	public List<Map<String, Object>> getbsn() {
+		// TODO Auto-generated method stub
+		List<Map<String, Object>> list = template.queryForList("select * from sanpham where iddm=4");
+		return list;
+	}
+
+	@Override
+	public List<Map<String, Object>> getdexuat() {
+		// TODO Auto-generated method stub
+		List<Map<String, Object>> list = template.queryForList("select * from sanpham order by rand() limit 5");
+		return list;
+	}
+
 }

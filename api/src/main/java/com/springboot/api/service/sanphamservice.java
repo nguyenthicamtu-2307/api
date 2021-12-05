@@ -43,4 +43,34 @@ public class sanphamservice implements SanphamInterface{
 		return dao.delete(id);
 	}
 
+	@Override
+	public List<Map<String, Object>> getts() {
+		// TODO Auto-generated method stub
+		return dao.getts();
+	}
+
+	@Override
+	public List<Map<String, Object>> getbm() {
+		// TODO Auto-generated method stub
+		return dao.getbm();
+	}
+
+	@Override
+	public List<Map<String, Object>> getcf() {
+		// TODO Auto-generated method stub
+		return dao.getcf();
+	}
+
+	@Override
+	public List<Map<String, Object>> getbsn() {
+		// TODO Auto-generated method stub
+		return dao.getbsn();
+	}
+
+	@Override
+	public List<Map<String, Object>> getdexuat() {
+		// TODO Auto-generated method stub
+		return dao.getdexuat();
+	}
+
 }

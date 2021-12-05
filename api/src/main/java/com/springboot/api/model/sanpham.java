@@ -11,7 +11,7 @@ public class sanpham {
 	//khai báo các cột có trong  bảng
 	@Id
 	@Column
-	private String idsp;
+	private int idsp;
 	@Column
 	private String tensp;
 	@Column
@@ -29,10 +29,10 @@ public class sanpham {
 	public sanpham() {
 		// TODO Auto-generated constructor stub
 	}
-	public String getIdsp() {
+	public int getIdsp() {
 		return idsp;
 	}
-	public void setIdsp(String idsp) {
+	public void setIdsp(int idsp) {
 		this.idsp = idsp;
 	}
 	public String getTensp() {
